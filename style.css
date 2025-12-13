@@ -1,13 +1,23 @@
 /* CosmoCon'25 - Main Stylesheet */
 
+/* Typography imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@500;600;700;800&family=Oxanium:wght@400;500;600;700&family=Exo+2:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Make all elements inherit the body font by default */
+*,
+*::before,
+*::after {
+  font-family: inherit;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Inter', 'Roboto', system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #000000;
   color: #e0e0e0;
   line-height: 1.6;
@@ -79,6 +89,8 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  font-family: 'Oxanium', 'Exo 2', 'Orbitron', sans-serif;
+  font-weight: 700;
 }
 
 .register-btn:hover {
@@ -108,6 +120,7 @@ body {
   background-attachment: fixed;
   position: relative;
   padding: 4rem 20px;
+  border-bottom: 2px solid #4a148c; /* Purple edge at bottom of hero to match nav/footer */
 }
 
 .hero::before {
@@ -131,21 +144,20 @@ body {
   color: #bb86fc;
   text-shadow: 0 0 20px #bb86fc;
   animation: 1s ease-in-out infinite alternate;
+  font-family: 'Orbitron', 'Oxanium', 'Exo 2', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Primary headings/titles use Orbitron */
+h1 {
+  font-family: 'Orbitron', 'Oxanium', 'Exo 2', sans-serif;
 }
 
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   color: #e0e0e0;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #bb86fc, 0 0 20px #bb86fc;
-  }
-  to {
-    text-shadow: 0 0 20px #bb86fc, 0 0 30px #bb86fc, 0 0 40px #bb86fc;
-  }
+  font-family: 'Inter', 'Roboto', system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Section Styles */
@@ -179,6 +191,32 @@ section > * {
   margin-bottom: 3rem;
   color: #bb86fc;
   text-shadow: 0 0 15px #bb86fc;
+  font-family: 'Orbitron', 'Oxanium', 'Exo 2', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Sub-headings use Oxanium/Exo 2 */
+h2,
+h3,
+.logo-item h3,
+.module-card h3,
+.footer h3 {
+  font-family: 'Oxanium', 'Exo 2', 'Orbitron', sans-serif;
+}
+
+/* All headings use Oxanium for consistent sub-heading style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.section-title,
+.nav-logo,
+.module-card h3,
+.footer h3,
+.logo-item h3 {
+  font-family: 'Oxanium', 'Exo 2', 'Orbitron', sans-serif;
 }
 
 /* About Section */
@@ -192,6 +230,7 @@ section > * {
 
 .about-content p {
   margin-bottom: 1.5rem;
+  font-family: 'Inter', 'Roboto', system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Modules Grid */
@@ -209,6 +248,9 @@ section > * {
   border: 2px solid #4a148c;
   transition: all 0.3s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 280px; /* ensure consistent card height */
 }
 
 .module-card:hover {
@@ -219,8 +261,27 @@ section > * {
 
 .module-card h3 {
   color: #bb86fc;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem; /* more space below title */
   font-size: 1.5rem;
+  font-family: 'Oxanium', 'Exo 2', 'Orbitron', sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.module-card p {
+  margin-bottom: 1.25rem; /* add space below description */
+  line-height: 1.8; /* improve readability */
+  font-family: 'Inter', 'Roboto', system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Align Details button to bottom across all module cards */
+.modules-grid .module-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.module-card .cta-button {
+  margin-top: auto; /* pushes button to bottom */
+  align-self: center; /* keeps it centered horizontally */
 }
 
 /* Organizers & Sponsors */
@@ -263,6 +324,8 @@ section > * {
   color: #bb86fc;
   text-shadow: 0 0 20px #bb86fc;
   margin-bottom: 1rem;
+  font-family: 'Orbitron', 'Oxanium', 'Exo 2', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .event-details {
@@ -282,11 +345,14 @@ section > * {
   color: #bb86fc;
   margin-bottom: 1rem;
   font-size: 1.8rem;
+  font-family: 'Oxanium', 'Exo 2', 'Orbitron', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 .detail-section p, .detail-section ul {
   font-size: 1.1rem;
   line-height: 1.8;
+  font-family: 'Inter', 'Roboto', system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .detail-section ul {
@@ -313,15 +379,13 @@ section > * {
   text-align: center;
 }
 
+/* Optional: info-card numbers/text consistency */
 .info-card h3 {
-  color: #bb86fc;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+  font-family: 'Oxanium', 'Exo 2', 'Orbitron', sans-serif;
 }
 
 .info-card p {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-family: 'Inter', 'Roboto', system-ui, -apple-system, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .cta-section {
@@ -342,9 +406,30 @@ section > * {
   display: inline-block;
   transition: all 0.3s ease;
   box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+  font-family: 'Oxanium', 'Exo 2', 'Orbitron', sans-serif;
+  font-weight: 700;
 }
 
 .cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.7);
+}
+
+/* Explore buttons using h4 tags */
+h4.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff;
+  padding: 1rem 3rem;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+  transition: all 0.3s ease;
+}
+
+h4.cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.7);
 }
@@ -354,7 +439,7 @@ section > * {
   background: rgba(0, 0, 0, 0.95);
   padding: 2rem 0;
   border-top: 2px solid #4a148c;
-  margin-top: 4rem;
+  margin-top: 0; /* previously 4rem created a gap */
 }
 
 .footer-content {
@@ -368,6 +453,8 @@ section > * {
   color: #bb86fc;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  font-family: 'Oxanium', 'Exo 2', 'Orbitron', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 .footer-info {
@@ -458,4 +545,9 @@ section > * {
   .nav-logo {
     font-size: 1.4rem;
   }
+}
+
+/* Optional: ensure last section doesn't add extra space before footer */
+section:last-of-type {
+  padding-bottom: 2rem; /* reduce bottom padding if needed */
 }

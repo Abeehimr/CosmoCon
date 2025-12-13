@@ -14,18 +14,13 @@
       <a href="index.html" class="nav-logo">CosmoCon'25</a>
       <button class="mobile-menu-toggle">☰</button>
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="competitive-programming.html" class="nav-link">Competitive Programming</a></li>
-        <li><a href="web-hackathon.html" class="nav-link">Web Hackathon</a></li>
-        <li><a href="line-following-robot.html" class="nav-link">Line Following Robot</a></li>
-        <li><a href="rc-robot-race.html" class="nav-link">RC Robot Race</a></li>
         <li><a href="#register" class="register-btn">Register Now</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Event Header -->
-  <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920');">
+  <section class="hero" style="background-image: url('./assets/rc.jpg');">
     <div class="hero-content">
       <h1>RC Robot Race</h1>
       <p>Control. Maneuver. Win.</p>
@@ -33,7 +28,7 @@
   </section>
 
   <!-- Event Details -->
-  <section style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920');">
+  <section style="background-image: url('./assets/stars2.jpg');">
     <div class="container event-details">
       
       <!-- Description -->
@@ -59,19 +54,23 @@
         <div class="info-grid">
           <div class="info-card">
             <h3>Registration Fee</h3>
-            <p>$18 per team</p>
+            <p>PKR 2000 per team (1500 for FCIT teams)</p>
           </div>
           <div class="info-card">
             <h3>Team Size</h3>
             <p>1-3 members</p>
           </div>
           <div class="info-card">
-            <h3>Race Format</h3>
-            <p>Time Trial + Finals</p>
+            <h3>Robot Limit</h3>
+            <p>1 robot per team</p>
           </div>
           <div class="info-card">
-            <h3>Attempts</h3>
-            <p>2 qualifying runs</p>
+            <h3>Control Type</h3>
+            <p>Manual (Remote Controlled)</p>
+          </div>
+          <div class="info-card">
+            <h3>Arena Type</h3>
+            <p>Obstacle-based racing track</p>
           </div>
         </div>
       </div>
@@ -80,38 +79,56 @@
       <div class="detail-section">
         <h2>Competition Rules</h2>
         <ul>
-          <li>Teams can have 1 to 3 members (one driver, others as pit crew)</li>
-          <li>Robot must be operated via wireless remote control</li>
-          <li>Maximum robot dimensions: 35cm x 35cm x 30cm</li>
-          <li>Maximum robot weight: 3 kg</li>
-          <li>All power sources must be onboard (batteries only)</li>
-          <li>Control frequency must not interfere with other robots</li>
-          <li>Robots must complete the course within 5 minutes</li>
-          <li>Touching or missing obstacles adds 10 seconds penalty per instance</li>
-          <li>Intentionally damaging the course or other robots results in disqualification</li>
-          <li>Teams must bring their own robots, controllers, and batteries</li>
-          <li>Qualifying rounds: best time from 2 attempts advances to finals</li>
-          <li>Finals: Top 8 teams compete in head-to-head races</li>
+          <li>This is a manual-control event; autonomous operation is not required.</li>
+          <li>The robot may be controlled using Bluetooth, Wi-Fi, RF, or a custom controller.</li>
+          <li>Hobby or ready-made RC cars are NOT allowed. Teams must build their own robots.</li>
+          <li>Only one robot is allowed per team.</li>
+          <li>Robots must comply with size, weight, and voltage limits.</li>
+          <li>Start and Finish zones will be clearly marked.</li>
+          <li>Checkpoints may be used for progress tracking and scoring.</li>
+          <li>Arena layout may change between rounds.</li>
+          <li>Robots damaging the arena, hurdles, or other robots will be disqualified.</li>
+          <li>Repeated loss of connection due to poor design may result in disqualification.</li>
+          <li>Misconduct, unsafe behavior, or violation of fair-play rules will lead to disqualification.</li>
         </ul>
+      </div>
+
+      <div class="detail-section">
+        <h2>Technical Requirements</h2>
+          <ul>
+            <li>Maximum robot dimensions: 12 × 12 inches.</li>
+            <li>Maximum robot weight: 3 kg.</li>
+            <li>Robot must be powered by onboard batteries only.</li>
+            <li>Maximum allowed voltage: 12V.</li>
+            <li>No external power supply or wired tether is allowed.</li>
+            <li>Microcontroller usage is optional (Arduino, STM32, ESP, etc.).</li>
+            <li>Allowed communication modules: Bluetooth, Wi-Fi, NRF / RF.</li>
+            <li>Any motor driver is permitted.</li>
+            <li>Any custom or commercial chassis may be used.</li>
+            <li>All circuits must be securely mounted and safe.</li>
+            <li>Exposed batteries, sparks, or loose wiring are strictly prohibited.</li>
+          </ul>
+
       </div>
 
       <!-- Course Features -->
       <div class="detail-section">
-        <h2>Course Challenges</h2>
-        <p>
-          🏁 Starting Sprint: Straight speed section<br>
-          🔄 Slalom Section: Weave through cones<br>
-          📐 90° Turn Challenge: Tight corner navigation<br>
-          ⛰️ Ramp Section: Upward and downward slopes<br>
-          🚧 Obstacle Zone: Navigate around barriers<br>
-          🎯 Precision Zone: Navigate narrow passages<br>
-          🏆 Final Stretch: Sprint to the finish<br>
-          <br>
-          The complete track layout will be revealed one week before the event.
-        </p>
+        <h2>Arena & Hurdle Specifications</h2>
+        <ul>
+          <li>Static blocks</li>
+          <li>Walls</li>
+          <li>Gates</li>
+          <li>Zig-zag sections</li>
+          <li>Narrow passages</li>
+          <li>Ramps (optional)</li>
+          <li>Layout may change between rounds.</li>
+          <li>Start and Finish zones will be clearly marked.</li>
+          <li>Checkpoints will be placed for progress tracking and scoring.</li>
+        </ul>
+
       </div>
 
-      <!-- Prizes -->
+      <!-- Prizes
       <div class="detail-section">
         <h2>Prizes & Recognition</h2>
         <p>
@@ -123,13 +140,13 @@
           <br>
           All participants receive certificates and RC component discounts from sponsors!
         </p>
-      </div>
+      </div> -->
 
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="cta-section" style="background-image: url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1920');">
+  <section class="cta-section" style="background-image: url('./assets/stars2.jpg');">
     <div class="container">
       <h2 class="section-title">Ready to Race?</h2>
       <a href="#register" class="cta-button">Register Your Team Now</a>
@@ -142,20 +159,20 @@
       <h3>Contact Us</h3>
       <div class="footer-info">
         <div class="footer-item">
-          <span>📧</span>
-          <a href="mailto:info@cosmocon25.com">info@cosmocon25.com</a>
+          <span>Mail:</span>
+          <a href="mailto:emsoc@pucit.edu.pk">emsoc@pucit.edu.pk</a>
         </div>
         <div class="footer-item">
-          <span>📱</span>
-          <a href="tel:+1234567890">+1 (234) 567-890</a>
+          <span>Mobile:</span>
+          <a href="tel:+923054633021">+92 305 4633021</a>
         </div>
         <div class="footer-item">
-          <span>📍</span>
-          <span>Innovation Campus, Tech City</span>
+          <span>Location:</span>
+          <span>FCIT-PUCIT old campus, Anarkali, Lahore</span>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 CosmoCon'25. All rights reserved.</p>
+        <p>created by gato gang</p>
       </div>
     </div>
   </footer>
