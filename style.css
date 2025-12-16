@@ -488,6 +488,47 @@ h4.cta-button:hover {
   color: #888;
 }
 
+/* Schedule tables */
+.table-scroll {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.schedule-table th,
+.schedule-table td {
+  border: 1px solid rgba(187, 134, 252, 0.3);
+  padding: 0.85rem 1rem;
+  text-align: left;
+}
+
+.schedule-table thead th {
+  background: rgba(187, 134, 252, 0.15);
+  color: #bb86fc;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.schedule-table tbody tr:hover {
+  background: rgba(187, 134, 252, 0.08);
+}
+
+/* Tighten detail sections for schedule */
+.detail-section h2 {
+  margin-bottom: 0.75rem;
+}
+
+.detail-section {
+  overflow: hidden;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .mobile-menu-toggle {
